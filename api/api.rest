@@ -1,0 +1,34 @@
+# POST http://localhost:8800/api/auth/register
+# Content-Type: application/json
+
+# {
+#     "username": "Jane",
+#     "email": "jane@gmail.com",
+#     "password": "jane123"
+# }
+
+# POST http://localhost:8800/api/conversations
+# Content-Type: application/json
+
+# {
+#     "senderId": "60d1b8fa745f412888f1f57a",
+#     "recieverId": "60d41acd93d34422fc84201c"
+# }
+
+# POST http://localhost:8800/api/messages
+# Content-Type: application/json
+
+# {
+#     "conversationId": "60d41d0eee2ae1089c6d2898",
+#     "sender": "60d1b8fa745f412888f1f57a",
+#     "text": "Testing"
+# }
+
+# GET http://localhost:8800/api/messages/60d41d0eee2ae1089c6d2898
+# Content-Type: application/json
+
+# GET http://localhost:8800/api/conversations/60d41acd93d34422fc84201c
+# Content-Type: application/json
+
+GET http://localhost:8800/api/users?userId=60d41acd93d34422fc84201c
+Content-Type: application/json
