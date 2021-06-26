@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 import './conversation.css'
+import noAvatar from '../../images/noAvatar.jpg'
 
 export default function Conversation({conversations, currentUser}) {
     const [user, setUser] = useState(null);
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    // const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
     useEffect(() => {
         const friendId = conversations?.members.find(m=> m !== currentUser._id)
@@ -26,7 +27,7 @@ export default function Conversation({conversations, currentUser}) {
     return (
         <div className="conversation">
             <img className="conversationImg" 
-            src={user?.profilePicture ? user?.profilePicture : PF+"person/noAvatar.png"}
+            src={user?.profilePicture ? user?.profilePicture : noAvatar}
             alt=""/>
             <span className="conversationName">{user?.username}</span>
         </div>
